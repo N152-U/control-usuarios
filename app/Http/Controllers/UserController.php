@@ -11,8 +11,8 @@ class UserController extends Controller
     //
     public function index()
     {
-        $users = User::lastest()->get();
-        return view('users.index', ['users' => $users]);
+        $users = User::latest()->get();
+        return view('users.index', compact('users'));
     }
     public function store(Request $request)
     {
